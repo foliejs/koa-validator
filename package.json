@@ -1,10 +1,10 @@
 {
-  "name": "phoenix-validator",
+  "name": "cyanide-validator",
   "version": "0.0.1",
   "description": "Validator for Phoenix Project",
   "main": "index.js",
   "dependencies": {
-    "phoenix-policy": "git+ssh://git@github.com:BTCChina/phoenix-policy.git"
+    "cyanide-policy": "git+ssh://git@github.com:cyanideio/policy.git"
   },
   "devDependencies": {
 		"jsdoc": "*",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BTCChina/phoenix-validator.git"
+    "url": "git+https://github.com/cyanideio/validator.git"
   },
   "keywords": [
     "validator",
@@ -29,7 +29,7 @@
   "author": "Frank",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BTCChina/phoenix-validator/issues"
+    "url": "https://github.com/cyanideio/validator/issues"
   },
-  "homepage": "https://github.com/BTCChina/phoenix-validator#readme"
+  "homepage": "https://github.com/cyanideio/validator#readme"
 }
