@@ -1,4 +1,4 @@
-const PolicyFactory = require('phoenix-policy').PolicyFactory
+const PolicyFactory = require('cyanide-policy').PolicyFactory
 /** Class for Request Validator */
 class BaseValidator {
 
