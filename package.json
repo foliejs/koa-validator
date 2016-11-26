@@ -4,7 +4,7 @@
   "description": "Validator for Phoenix Project",
   "main": "index.js",
   "dependencies": {
-    "cyanide-policy": "git+ssh://git@github.com:cyanideio/policy.git"
+    "cyanide-policy": "git+https://github.com/cyanideio/policy"
   },
   "devDependencies": {
 		"jsdoc": "*",
