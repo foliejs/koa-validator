@@ -9,10 +9,11 @@ class BaseValidator {
 	 */
 	constructor(opt) {
 		this.policyFactory = new PolicyFactory({
+			policy_path: opt.policy_conf.path,
 			error_conf:opt.error_conf
 		})
 		this.conf = opt.conf
-		this.policy_conf = opt.policy_conf
+		this.policy_conf = opt.policy_conf.policies
 	}
 
 
