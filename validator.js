@@ -1,4 +1,5 @@
-const PolicyFactory = require('cyanide-policy').PolicyFactory
+// const PolicyFactory = require('cyanide-policy').PolicyFactory
+
 /** Class for Request Validator */
 class BaseValidator {
 
@@ -8,14 +9,15 @@ class BaseValidator {
 	 * @param  {Array} policy_conf, Policies
 	 */
 	constructor(opt) {
-		this.policyFactory = new PolicyFactory({
-			policy_path: opt.policy_conf.path,
-			error_conf:opt.error_conf
-		})
-		this.conf = opt.conf
-		this.policy_conf = opt.policy_conf.policies
+		this.policyFactory = opt.policyFactory
 	}
 
+	/**
+	 * @attribute policy_conf
+	 */
+	get policy_conf() {
+		throw new Error('Unimplemented')
+	}
 
 	/**
 	 * @attribute policies
