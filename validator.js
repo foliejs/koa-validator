@@ -9,6 +9,7 @@ class BaseValidator {
 	 * @param  {Array} policy_conf, Policies
 	 */
 	constructor(opt) {
+		this.policy_index = 0
 		this.policyFactory = opt.policyFactory
 	}
 
@@ -43,10 +44,16 @@ class BaseValidator {
 	 * @return {[type]} [description]
 	 */
 	run() {
-		this.policies.forEach((policy, index) => {
-			policy.approve(this)
-		})
-		return this	
+		return this.next()
+	}
+
+	next() {
+		if (this.policy_index < this.policies.length) {
+			this.policy_index += 1
+			this.policies[this.policy_index].approve(this)
+		} else {
+			return this
+		}
 	}
 
 	validate(obj) {
