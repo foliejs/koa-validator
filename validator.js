@@ -1,4 +1,3 @@
-const PolicyFactory = require('cyanide-policy').PolicyFactory
 /** Class for Request Validator */
 class BaseValidator {
 
@@ -8,14 +7,16 @@ class BaseValidator {
 	 * @param  {Array} policy_conf, Policies
 	 */
 	constructor(opt) {
-		this.policyFactory = new PolicyFactory({
-			policy_path: opt.policy_conf.path,
-			error_conf:opt.error_conf
-		})
-		this.conf = opt.conf
-		this.policy_conf = opt.policy_conf.policies
+		this.policyFactory = opt.policyFactory
+		this.policy_list = []
 	}
 
+	/**
+	 * @attribute policy_conf
+	 */
+	get policy_conf() {
+		throw new Error('Unimplemented')
+	}
 
 	/**
 	 * @attribute policies
@@ -33,7 +34,7 @@ class BaseValidator {
 	}
 
 	after() {
-		return this
+		return this.done()
 	}
 
 	/**
@@ -41,18 +42,20 @@ class BaseValidator {
 	 * @return {[type]} [description]
 	 */
 	run() {
-		this.policies.forEach((policy, index) => {
-			policy.approve(this)
-		})
-		return this	
+		this.policy_list = this.policies
+		return this.next()
+	}
+
+	next() {
+		if (this.policy_list.length) {
+			return this.policy_list.shift().approve(this)
+		} else {
+			return this.after()
+		}
 	}
 
 	validate(obj) {
-		return this
-			.before()
-			.run()
-			.after()
-			.done()
+		return this.before().run()
 	}
 
 	/**
