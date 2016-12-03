@@ -7,6 +7,7 @@ class BaseValidator {
 	 * @param  {Array} policy_conf, Policies
 	 */
 	constructor(opt) {
+		this.conf = opt.conf
 		this.policyFactory = opt.policyFactory
 		this.policy_list = []
 	}
