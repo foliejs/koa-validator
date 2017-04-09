@@ -1,3 +1,3 @@
 module.exports = {
-  BaseValidator:require("./validator"),
+  BaseValidator: require('./validator'),
 }

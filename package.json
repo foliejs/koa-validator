@@ -7,7 +7,7 @@
     "cyanide-policy": "git+https://github.com/cyanideio/policy"
   },
   "devDependencies": {
-		"jsdoc": "*",
+    "jsdoc": "*",
     "should": "*",
     "istanbul": "*"
   },
