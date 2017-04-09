@@ -1,5 +1,5 @@
 {
-  "name": "cyanide-validator",
+  "name": "tool-validator",
   "version": "0.0.1",
   "description": "Validator for Phoenix Project",
   "main": "index.js",
