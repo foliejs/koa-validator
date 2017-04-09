@@ -12,4 +12,4 @@ Genine Javascript Validator
 - Throws errors
 
 ## Change Log
-Please Refer to [https://github.com/cyanideio/validator/releases](https://github.com/cyanideio/validator/releases)
+Please Refer to [https://bitbucket.org/teambition/validator](https://bitbucket.org/teambition/validator)
