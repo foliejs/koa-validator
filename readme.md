@@ -7,6 +7,8 @@
                                                                                                   
 ```
 # Tool Validator
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/foliejs/koa-validator.svg)](https://greenkeeper.io/)
 Genine Javascript Validator
 - Assembles Policies according to Policy Configuration Files
 - Throws errors
